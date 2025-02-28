@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Koppisetti Devika</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/img/favicon.png" rel="icon">
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/css/main.css" rel="stylesheet">
+
+  <style>
+    .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .btn-primary {
+        font-size: 14px !important;
+        padding: 8px 16px !important;
+      }
+    }
+
+    .contact .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact .form-control {
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      padding: 12px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .contact .form-control:focus {
+      background: #ffffff;
+      box-shadow: 0 0 15px rgba(13, 110, 253, 0.15);
+    }
+
+    .contact .btn-primary {
+      background: linear-gradient(45deg, #0d6efd, #0099ff);
+      border: none;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+    }
+
+    .contact .btn-primary:hover {
+      background: linear-gradient(45deg, #0099ff, #0d6efd);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+    }
+
+    .contact {
+      padding: 60px 0;
+      background: #f8f9fa;
+    }
+
+    .contact .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact .card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact .card-body {
+      padding: 40px;
+    }
+
+    .contact .form-control {
+      background: #f8f9fa;
+      border: 2px solid #e0e0e0;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .contact .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+      background: #ffffff;
+    }
+
+    .contact textarea.form-control {
+      min-height: 150px;
+    }
+
+    .contact .btn-primary {
+      margin-top: 15px;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: linear-gradient(45deg, #0d6efd, #0099ff);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+      background: linear-gradient(45deg, #0099ff, #0d6efd);
+    }
+
+    @media (max-width: 768px) {
+      .contact .card-body {
+        padding: 20px;
+      }
+      
+      .contact .container {
+        padding: 0 15px;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="/static/img/devka.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+     
+     
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">KOPPISETTI DEVIKA</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#projects"><i class="bi bi-file-earmark-text navicon"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="/static/img/computer.jpg" alt="Computer" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>KOPPISETTI DEVIKA</h2>
+        <p>I'm <span class="typed" data-typed-items="Fresher, Designer"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I'm passionate about my work and I know how to get the job done. I would describe myself as an open and honest person.Good listener and learner, able to communicate well with a group and on an individual level. </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="80">
+
+        <div class="row gy-4 justify-content-center">
+          
+          <div class="col-lg-8 content">
+            <h2>BIO DATA.</h2>
+            <p class="fst-italic py-3">
+           
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>23 December 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 63055 87660</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Vijayawada, Andhra pradesh</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Computer science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>devikakoppisetti2003@gmail.com</span></li>
+              
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              The ultimate goal is to achieve Software Developer.
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <!-- Resume Section -->
+<section id="resume" class="resume section">
+
+  <!-- Section Title -->
+         <div class="container section-title" data-aos="fade-up">
+             <h2>Resume</h2>
+          
+            <p><a href="/static/img/devikaresume.pdf/" class="btn btn-primary py-3 px-3">Download CV</a></p>
+   
+         </div>
+      <!-- Skills Section -->
+<section id="skills" class="skills section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Python</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>HTML/CSS</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Java</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary </h3>
+
+            <div class="resume-item pb-0">
+              <h4>Koppisetti Devika</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing  from initial concept to final.</em></p>
+              <ul>
+                <li>Vijayawada, Andhra pradesh</li>
+                <li>+91 63055 87660</li>
+      
+              </ul>
+            </div><!-- Edn Resume Item -->
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Computer science &amp; STATISTICS</h4>
+              <h5>2022 - 2025</h5>
+              <p><em>Kakarapathi bhavanarayan college</em></p>
+              <p>Current CGPA: 70%</p>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Board of intermediate &amp; MEC</h4>
+              <h5>2020 - 2022</h5>
+              <p><em>Sri chaitanya college</em></p>
+              <p>CGPA: 52%</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+            <div class="resume-item">
+              <h4>SSC &amp; 10th</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>Nagarjuna High school</em></p>
+              <p>CGPA: 98%</p>
+            </div><!--Edn Resume Item-->
+            </div>        
+        </div>    
+        
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Projects</h3>
+            <div class="card-body">
+              <h6 class="title text-danger">2025</h6>
+              <P>Python full stack developer</P>
+              <P class="subtitle">I am a skilled Python Full Stack Developer with expertise in both front-end and back-end technologies. I specialize in building scalable, efficient, and user-friendly web applications using Python, frameworks like Django and Flask, and modern front-end tools.</P>
+              <hr>
+              <h6 class="title text-danger">2024</h6>
+              <P>E-Commerce Web Site</P>
+              <P class="subtitle">This project was an e-commerce website built by using HTML,CSS,JAVASCRIPT as a frontend developer.</P>
+              <P class="subtitle">Military Expenditure Data Analysis using python, Data analysis and machine learning</P>
+              <hr>
+              <h6 class="title text-danger">2023</h6>
+              <P>Community Service Project</P>
+              <P class="subtitle">This project focus on helping peopele with a team and iam the leader of the team.</P>
+          </div>
+
+        
+        
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>          
+              
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="resume-item">
+              <h6 class="title text-danger">2025</h6>
+              <p>Python full stack developer</p>
+              <p class="subtitle">I am a skilled Python Full Stack Developer with expertise in both front-end and back-end technologies. I specialize in building scalable, efficient, and user-friendly web applications using Python, frameworks like Django and Flask, and modern front-end tools.</p>
+              
+              <hr>
+              <h6 class="title text-danger">2024</h6>
+              <p>E-Commerce Web Site</p>
+              <p class="subtitle">This project was an e-commerce website built by using HTML,CSS,JAVASCRIPT as a frontend developer.</p>
+              <p class="subtitle">Military Expenditure Data Analysis using python, Data analysis and machine learning</p>
+              
+              <hr>
+              <h6 class="title text-danger">2023</h6>
+              <p>Community Service Project</p>
+              <p class="subtitle">This project focus on helping peopele with a team and iam the leader of the team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (this should be the last section) -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Let's Connect! Fill out the form below and I'll get back to you as soon as possible.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card">
+              <div class="card-body">
+                <form class="form-contact contact_form" id="contactForm">
+                  <div class="row g-4">
+                    <div class="col-12">
+                      <textarea 
+                        class="form-control" 
+                        name="message" 
+                        id="message" 
+                        placeholder="Your Message"
+                      ></textarea>
+                    </div>
+                    <div class="col-md-6">
+                      <input 
+                        class="form-control" 
+                        name="name" 
+                        id="name" 
+                        type="text" 
+                        placeholder="Your Name"
+                      >
+                    </div>
+                    <div class="col-md-6">
+                      <input 
+                        class="form-control" 
+                        name="email" 
+                        id="email" 
+                        type="email" 
+                        placeholder="Your Email"
+                      >
+                    </div>
+                    <div class="col-12">
+                      <input 
+                        class="form-control" 
+                        name="subject" 
+                        id="subject" 
+                        type="text" 
+                        placeholder="Subject"
+                      >
+                    </div>
+                    <div class="col-12">
+                      <button 
+                        type="button" 
+                        class="btn btn-primary w-100" 
+                        onclick="sendEmail()"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="/static/js/main.js"></script>
+
+  <!-- Add this smooth scroll script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Add this script before the closing body tag -->
+  <script>
+  function sendEmail() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    // Create the email body with formatting
+    const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    
+    // Open Gmail compose window
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=devikakoppisetti2003@gmail.com&subject=${encodeURIComponent(subject)}&body=${emailBody}`, '_blank');
+  }
+  </script>
+
+</body>
+</html>
